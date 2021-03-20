@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+section {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(87, 106, 112);
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.container > h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+.container > input {
+  background: none;
+  padding: 8px 10px;
+  padding-left: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  margin: 20px auto;
+  font-size: 1.2rem;
+  outline: none;
+  width: 50%;
+  color: #fff;
+  letter-spacing: 1px;
+  background: url(./search-outline.svg) no-repeat right top;
+  background-origin: content-box;
+}
+@media screen and (max-width: 480px) {
+  .container > input {
+    width: 90%;
+  }
+}
+.container > input::placeholder {
+  opacity: 0.5;
+  color: #fff;
+}
+div.results {
+  display: grid;
+  margin-top: 40px;
+  grid-gap: 25px;
+  width: 100%;
+  grid-template: auto / repeat(auto-fit, minmax(280px, 1fr));
+}
+.items {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.1);
+}
+.items img {
+  border-radius: 0px 0px 15px 15px;
+  width: 100%;
+  object-fit: cover;
+  height: 270px;
+}
+.items .recipe {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+.recipe a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  transition: all 2s;
+}
+.recipe a:hover {
+  text-decoration: underline;
+}
+.items p {
+  color: #fff;
+  margin: 0;
+  padding: 0 10px;
+  letter-spacing: 1px;
+}
